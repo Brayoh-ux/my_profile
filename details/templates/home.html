@@ -1,10 +1,251 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load bootstrap4 %}
 
 {% block content %}
     <link rel="stylesheet" href=" {%static 'css/home.css' %} ">
 
-    <h1>Welcome</h1>
+    <div class="container-fluid">
+        {% include 'navbar.html' %}
+        <br>
+        <hr>
+      <!-- about -->
+        <div class="container">
+          <h6>Hello, my name is </h6>
+      
+          <h1 style="color: #fff;">Brian M. Nderitu</h1>
+          <h3>
+              A Fullstack Software Developer,<br>passionate about my work and <br> creating web Applications that make an impact.
+          </h3>
+      
+          <!-- about -->
+      
+          <div class="logo" id="about">
+              <h2 class="text-center">About Me </h2>
+              <br><br>  
+              <div class="row">
+                  <div class="col-md-6">
+                      
+                      {% for prof in profile %}
+                      <section class="img">
+                          <img src=" {{prof.image.url}} " alt="">
+                      </section>
+                      {% empty %}
+                      <p>No picture</p>
+                      {% endfor %}
+                      <br><br><br><br><br><br><br><br> 
+                  </div>
+                  <div class="col-md-6">
+                      <div class="about_me">
+                          <br><br>
+                          <p>I am a FullStack Developer  and graduate of Moringa School. I create successful websites that are fast, easy to use, and built with best practices.
+      
+                              I work to make a better web; one that is fast, easy to use, beautiful, accessible to all, and frustration-free. <br><br> Regardless of your specific business requirements, in solving these challenges, you have a great chance of finding success online.
+                              
+                              My main experience is in front-end and backend development but I also have a passion for design. <br><br> Given that producing a modern website requires the combination of design, server technology, and the layer that users interacts with, I believe having experience in both design and development allows for making the most optimal user experiences.
+                              
+                              </p>
+                          <br><br>
+                      </div>
+                      <br><br><br>
+                   </div>
+                 
+              </div>
+      
+              <br><br> <br><br>
+              <h2 style="font-family: cursive; color:antiquewhite;">Technologies and Frame works I use</h2><br><br>
+              <div class="row">
+                  <!--  -->
+                  <div style="color: grey;" class="col-md-6">
+                      <p> > HTML </p>
+                      <p> > CSS </p>
+                      <p> > JAVASCRIPT</p>
+                      <P> > SQLITE</P>
+      
+                  </div>
+                  <div style="color: grey;" class="col-md-6">
+                      <p> > PYTHON</p>
+                      <p>> DJANGO</p>
+                      <p> > ANGULAR</p>
+                      <P> > FLASK </P>
+                      <p> > POSTGRES</p>
+                  </div>
+      
+                  <p class="text-light" style="font-family: 'Courier New', Courier, monospace;">
+                      Am open to learning new frameworks and technologies on the job , "there's always room to learn something new"</p>
+              </div>
+      
+             <hr>
+          </div>
+      
+            <!-- end obout -->
+      
+        <!-- projects -->
+      
+        <div class="logo" id="projects">
+          <h2 style="font-family: cursive;" class="text-center">Some Apps I have built.... </h2>
+         
+          <br><br>
+          <div class="row">
+              {% for pic in pictures %}
+              <div class="col-md-6">
+                  <img src=" {{pic.project_1.url}} " alt="project image"> 
+              </div>
+              {% empty %}
+              <p>no pics</p>
+              {% endfor %}
+              <div class="col-md-6 news">
+                  <h4>Sunday App</h4>
+                  <p>Project 1</p>
+                  
+                  <br><br>
+                  <div class="about_project">
+                     <p>An app that helps Sunday school teachers communicate with their students during covid-19 Church lockdown. <br> The purpose of this app is to connect teachers and pupils virtually</p>
+                  </div>
+                  <br><br> 
+                  <div class="git">
+                      <a  href="https://github.com/Brian569/Sunday-App"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                          <a href="https://sunday-app1.herokuapp.com/"><span class="material-icons">
+                              open_in_new
+                              </span></a>
+                  </div>
+                  
+                
+                            
+              </div>
+          </div>
+          <br><br><br>   
+          <div class="dashed-border">
+           
+          </div>
+          <!-- two -->
+      
+          <br><br>
+          <div class="row">
+              {% for pic in pictures %}
+              <div class="col-md-6">
+                  <img src=" {{pic.project_2.url}} " alt="project image">
+              </div>
+              {% empty %}
+              <p>no pics</p>
+              {% endfor %}
+              
+              <div class="col-md-6 news">
+                  <h4>Go_News-App</h4>
+                  <p>Project 2</p>
+                  
+                  <br><br>
+                  <div class="about_project">
+                      <p>Go News App is a web application that displays a list of various news sources, top headlines on the landing page and world leading news caster BBC. Clicking a news article will redirect the user to read it fully from the news source. It achieves this by using the News API.</p>
+                      
+                  </div>
+                  <br><br> 
+                  <div class="git">
+                      <a  href="https://github.com/Brayoh-ux/Go_News-App"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                          <a href="https://gonewsapp.herokuapp.com/"><span class="material-icons">
+                              open_in_new
+                              </span></a>
+                  </div>
+                  
+                
+                            
+              </div>
+          </div>
+          <br><br><br>   
+          <div class="dashed-border">
+           
+          </div>
+          <!-- three -->
+      
+          <br><br>
+          <div class="row">
+              {% for pic in pictures %}
+              <div class="col-md-6">
+                  <img src=" {{pic.project_3.url}} " alt="project image">
+              </div>
+              {% empty %}
+              <p>no pics</p>
+              {% endfor %}
+              <div class="col-md-6 news">
+                  <h4>Brayoh Pizza Palace</h4>
+                  <p>Project 3</p>
+                  
+                  <br><br>
+                  <div class="about_project">
+                     <p>A simple app made with HTML, CSS and JAVASCRIPT. Pizza ordering application that lets you select the size, toppings, crusts on pizzas and say how you want it delivered. </p>
+                  </div>
+                  <br><br> 
+                  <div class="git">
+                      <a  href="https://github.com/Brayoh-ux/pizza-palace"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                          <a href="https://brayoh-ux.github.io/pizza-palace/"><span class="material-icons">
+                              open_in_new
+                              </span></a>
+                  </div>
+                  
+                
+                            
+              </div>
+          </div>
+          <br><br><br>   
+          <div class="dashed-border">
+           
+          </div>
+      
+          <div class="more">
+              <button class="span" type="button"><span></span> <a href="{% url 'more' %}">more....</a></button>
+          </div>
+          
+      
+          
+      
+        </div>
+        <!-- end projects -->
+      
+        <!-- contacts -->
+        
+        <hr>
+      
+        <div class="logo" id="contact">
+          <h2 class="text-center" >Contact Me </h2>
+          <br><br>
+          <p>Need a Developer?, Contact me ...</p>
+          <br><br>
+        
+          <div class="row">
+              <div class="col-md-6 best">
+                  <br><br><br><br>
+                  <p>
+                      <span class="material-icons">
+                          email
+                          </span>  <spans>....</spans><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=bnderitu48@gmail.com">bnderitu48@gmail.com</a>
+                  </p>
+                  <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                      <spans>....</spans><a href="https://www.linkedin.com/in/brian-mbugua-nderitu-000792211/">LinkedIn</a>
+                  </p>
+                  <!-- <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      <spans>....</spans><a href="https://github.com/Brian569">Github</a>
+                  </p> -->
+              </div>
+              <div class="col-md-6">
+                  <div class="img">
+                      
+                      {% for pf in profile %}
+                      <img style=" margin-left: 8vmin;" src=" {{pf.image.url}} " alt="">
+                      {% empty %}
+                      <p>No picture</p>
+                      {% endfor %}
+                          
+                      
+                  </div>
+              </div>
+          </div>
+          </div>
+         </div>
+      
+      
+          
+      </div>
 {% endblock content %}
     

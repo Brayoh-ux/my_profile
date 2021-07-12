@@ -9,3 +9,9 @@ migrate:
 
 static:
 	python3 manage.py collectstatic
+
+superuser:
+	python3 manage.py createsuperuser
+
+freeze:
+	pip freeze > requirments.txt

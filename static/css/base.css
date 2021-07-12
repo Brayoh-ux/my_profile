@@ -1,0 +1,123 @@
+svg{
+    color: red;
+}
+body{
+    
+    color: #fff;
+}
+.one{
+    margin-bottom: 5vmin;
+   
+}
+.logo{
+    font-family: 'Chela One', cursive;
+    color: rgb(14, 202, 105);
+    margin-top: 5vmin;
+    margin-left: 10vmin;
+}
+
+nav{
+    font-family: 'Josefin Sans', sans-serif;
+    /* z-index: 1; */
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 10vmin;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 1.3rem;
+    
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color:  rgb(14, 202, 105); 
+}
+#about h2{
+    margin-top: 20vmin;
+}
+
+.container{
+    margin-top: 7vmin;
+}
+.container h6, h3{
+    margin-top: 8vmin;
+    font-size: 2rem;
+    color: rgb(181, 181, 181);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container h6{
+    margin-top: 10vmin;
+}
+
+.container h1{
+    margin-top: 7vmin;
+    font-family: 'Ultra', serif;
+    font-size: 4rem;
+}
+
+
+button{
+font-weight: bold;
+border: 1px solid greenyellow;
+background: transparent;
+color: #fff;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+font-family: cursive
+
+
+}
+button a{
+text-decoration: none;
+overflow: hidden;
+color: #fff;
+}
+button a:hover{
+text-decoration: none;
+color: #fff;
+}
+.span span{
+background: #427e60;
+height: 100%;
+width: 0;   width: 0;
+border-radius: 25px;
+position: absolute;
+left: 0;
+bottom: 0;
+z-index: -1;
+border-radius: 25px;
+position: absolute;
+left: 0;
+bottom: 0;
+z-index: -1;
+transition: 0.5s;
+}
+
+button:hover span{
+width: 100%;
+
+}
+button:hover{
+border: none;
+}
+
+a{
+    height: 20vmin;
+    color: rgb(93, 225, 137);
+    margin-right: 5vmin;
+}
+
+footer{
+    margin-bottom: 10vmin;
+    margin-left: 5vmin;
+    color: rgb(181, 181, 181);
+    opacity: .90;
+}
+footer p a:hover{
+    color: #fff;
+}
